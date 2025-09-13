@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>Welcome, <span id="studentName"></span></h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <aside class="sidebar">
+      <ul>
+        <li onclick="showSection('courses')">📚 Courses</li>
+        <li onclick="showSection('profile')">👤 Profile</li>
+        <li onclick="showSection('notifications')">🔔 Notifications</li>
+        <li onclick="showSection('reports')">📊 Reports</li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <!-- Courses -->
+      <div id="courses" class="section active">
+        <h3>My Courses</h3>
+        <ul>
+          <li>HTML & CSS Basics</li>
+          <li>JavaScript Essentials</li>
+          <li>Database Fundamentals</li>
+        </ul>
+      </div>
+
+      <!-- Profile -->
+      <div id="profile" class="section">
+        <h3>My Profile</h3>
+        <p><b>Username:</b> <span id="profile-username"></span></p>
+        <p><b>Email:</b> <span id="profile-email"></span></p>
+      </div>
+
+      <!-- Notifications -->
+      <div id="notifications" class="section">
+        <h3>Notifications</h3>
+        <p>No new notifications.</p>
+      </div>
+
+      <!-- Reports -->
+      <div id="reports" class="section">
+        <h3>Reports</h3>
+
+        <p>HTML & CSS Basics</p>
+        <div class="progress-bar"><div style="width:100%">100%</div></div>
+        <p class="status-text">Status: Completed</p>
+
+        <p>JavaScript Essentials</p>
+        <div class="progress-bar"><div style="width:60%">60%</div></div>
+        <p class="status-text">Status: In Progress</p>
+
+        <p>Database Fundamentals</p>
+        <div class="progress-bar"><div style="width:30%">30%</div></div>
+        <p class="status-text">Status: Not Started</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
